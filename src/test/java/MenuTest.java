@@ -1,16 +1,12 @@
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import pages.Menu;
+import util.Do_Login;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 
-public class MenuTest extends LoginTest{
-
-    @AfterClass
-
+public class MenuTest extends Do_Login {
+    @Test
     public void menuSelection()
     {
-
         Menu menu=new Menu(driver);
         menu.dashboardMenu();
         menu.salesMenu();
